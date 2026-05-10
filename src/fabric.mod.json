@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "oyvey",
+  "version": "1.7-fix",
+  "name": "ZWare",
+  "description": "Crack this and i will brutalize your corpse",
+  "authors": [
+    "dmt 1",
+    "dmt 2",
+    "dmt 3",
+    "dmt 4"
+  ],
+  "contact": {
+    "repo": "https://github.com/Netanyahu67/ZWare-NewBase"
+  },
+  "license": "Proprietary - All Rights Reserved",
+  "environment": "client",
+  "accessWidener": "zware.accesswidener",
+  "entrypoints": {
+    "client": [
+      "Dev.ZWare.Client.FaCL0AxyPBb_pnwYD"
+    ],
+    "main": [
+      "Dev.ZWare.Client.FaCL0AxyPBb_pnwYD"
+    ]
+  },
+  "mixins": [
+    "zware.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.5"
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/LambdaEvents-2.4.2.jar"
+    },
+    {
+      "file": "META-INF/jars/catformat-core-2.1.0.jar"
+    },
+    {
+      "file": "META-INF/jars/catformat-fabric-2.1.0.jar"
+    },
+    {
+      "file": "META-INF/jars/orbit-0.2.4.jar"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+package Dev.ZWare.Client.pkg1.pkg4;
+
+public final class Class5 {
+   // $VF: renamed from: a int[]
+   private static final int[] field_260 = new int[]{67, 33, 95, 18, 122, 9, 109, 48, 24, 85, 44};
+   // $VF: renamed from: b int[][]
+   private static final int[][] field_261 = new int[][]{
+      {
+            110,
+            13,
+            112,
+            60,
+            83,
+            78,
+            46,
+            112,
+            89,
+            18,
+            6,
+            24,
+            120,
+            16,
+            80,
+            60,
+            90,
+            92,
+            105,
+            78,
+            24,
+            20,
+            120,
+            27,
+            106,
+            38,
+            106,
+            95,
+            55,
+            70,
+            113,
+            15,
+            91,
+            27,
+            107,
+            23,
+            121,
+            37,
+            70,
+            16,
+            82,
+            33,
+            28
+      },
+      {
+            66,
+            57,
+            67,
+            48,
+            110,
+            97,
+            24,
+            125,
+            32,
+            81,
+            116,
+            74,
+            38,
+            70,
+            17,
+            116,
+            72,
+            48,
+            110,
+            2,
+            105,
+            32,
+            38,
+            40,
+            73,
+            52,
+            124,
+            118,
+            40,
+            118,
+            37,
+            107,
+            12,
+            121,
+            40,
+            74,
+            31,
+            105,
+            124,
+            42,
+            101,
+            30,
+            76
+      },
+      {
+            11,
+            97,
+            74,
+            98,
+            93,
+            50,
+            103,
+            44,
+            51,
+            59,
+            79,
+            88,
+            123,
+            121,
+            60,
+            92,
+            18,
+            112,
+            58,
+            110,
+            53,
+            112,
+            4,
+            79,
+            86,
+            59,
+            125,
+            28,
+            80,
+            14,
+            98,
+            63,
+            93,
+            55,
+            109,
+            68,
+            2,
+            70,
+            41,
+            82,
+            30,
+            99,
+            63
+      },
+      {
+            5,
+            111,
+            38,
+            115,
+            127,
+            68,
+            76,
+            119,
+            32,
+            72,
+            54,
+            8,
+            80,
+            57,
+            18,
+            101,
+            107,
+            7,
+            60,
+            42,
+            10,
+            45,
+            86,
+            11,
+            101,
+            0,
+            127,
+            49,
+            48,
+            87,
+            56,
+            2,
+            91,
+            20,
+            123,
+            25,
+            127,
+            4,
+            43,
+            43,
+            87,
+            40,
+            0
+      },
+      {8, 119, 57, 80}
+   };
+
+   private Class5() {
+   }
+
+   // $VF: renamed from: a () java.lang.String
+   public static String method_489() {
+      StringBuilder var0 = new StringBuilder(176);
+
+      for (int var1 = 0; var1 < field_261.length; var1++) {
+         int[] var2 = field_261[var1];
+
+         for (int var3 = 0; var3 < var2.length; var3++) {
+            var0.append((char)method_490(var2[var3], var1, var3));
+         }
+      }
+
+      return var0.toString();
+   }
+
+   // $VF: renamed from: a (int, int, int) int
+   private static int method_490(int var0, int var1, int var2) {
+      return var0 ^ field_260[(var2 + var1 * 3) % field_260.length] ^ var1 * 17 + var2 & 31;
+   }
+}

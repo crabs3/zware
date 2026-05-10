@@ -1,0 +1,38 @@
+{
+  "targets": {
+    "swap": {}
+  },
+  "passes": [
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/chams_image",
+      "inputs": [
+        {
+          "sampler_name": "Diffuse",
+          "target": "minecraft:entity_outline",
+          "bilinear": true
+        },
+        {
+          "sampler_name": "Image",
+          "location": "oyvey:dynamic/chams_image",
+          "width": 16,
+          "height": 16,
+          "bilinear": true
+        }
+      ],
+      "output": "swap"
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/chams_blit",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "swap",
+          "bilinear": true
+        }
+      ],
+      "output": "minecraft:entity_outline"
+    }
+  ]
+}

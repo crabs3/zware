@@ -1,0 +1,122 @@
+{
+  "custom_1": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/custom_1",
+        "stream": false
+      }
+    ]
+  },
+  "custom_2": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/custom_2",
+        "stream": false
+      }
+    ]
+  },
+  "custom_3": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/custom_3",
+        "stream": false
+      }
+    ]
+  },
+  "custom_4": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/custom_4",
+        "stream": false
+      }
+    ]
+  },
+  "custom_5": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/custom_5",
+        "stream": false
+      }
+    ]
+  },
+  "enable": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/enable",
+        "stream": false
+      }
+    ]
+  },
+  "hover": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/hover",
+        "stream": false
+      }
+    ]
+  },
+  "hover2": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/hover2",
+        "stream": false
+      }
+    ]
+  },
+  "boot": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/boot",
+        "stream": false
+      }
+    ]
+  },
+  "twitter": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/twitter",
+        "stream": false
+      }
+    ]
+  },
+  "gta": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/gta",
+        "stream": false
+      }
+    ]
+  },
+  "f1": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/f1",
+        "stream": false
+      }
+    ]
+  },
+  "google": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/google",
+        "stream": false
+      }
+    ]
+  },
+  "undertale": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/undertale",
+        "stream": false
+      }
+    ]
+  },
+  "samsung": {
+    "sounds": [
+      {
+        "name": "oyvey:custom/samsung",
+        "stream": false
+      }
+    ]
+  }
+}

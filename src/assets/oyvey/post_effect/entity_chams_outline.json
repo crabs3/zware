@@ -1,0 +1,113 @@
+{
+  "targets": {
+    "base": {},
+    "extract": {},
+    "aura": {},
+    "blur_a": {},
+    "blur_b": {}
+  },
+  "passes": [
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_copy",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "minecraft:entity_outline",
+          "bilinear": true
+        }
+      ],
+      "output": "base"
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_extract",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "base",
+          "bilinear": true
+        }
+      ],
+      "output": "extract"
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_aura_edge",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "base",
+          "bilinear": true
+        }
+      ],
+      "output": "aura"
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_blur",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "extract",
+          "bilinear": true
+        }
+      ],
+      "output": "blur_a",
+      "uniforms": [
+        {
+          "name": "BlurDir",
+          "type": "vec2",
+          "values": [
+            1.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_blur",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "blur_a",
+          "bilinear": true
+        }
+      ],
+      "output": "blur_b",
+      "uniforms": [
+        {
+          "name": "BlurDir",
+          "type": "vec2",
+          "values": [
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "vertex_shader": "oyvey:post/hand_fullscreen",
+      "fragment_shader": "oyvey:post/hand_composite",
+      "inputs": [
+        {
+          "sampler_name": "Hands",
+          "target": "base",
+          "bilinear": true
+        },
+        {
+          "sampler_name": "Bloom",
+          "target": "blur_b",
+          "bilinear": true
+        },
+        {
+          "sampler_name": "Aura",
+          "target": "aura",
+          "bilinear": true
+        }
+      ],
+      "output": "minecraft:entity_outline"
+    }
+  ]
+}
